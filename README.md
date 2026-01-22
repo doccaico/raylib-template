@@ -22,7 +22,7 @@ $ ./script/build_mingw64.sh --release
 $ ./script/build_mingw64.sh && ./bin/debug/app.exe
 ```
 
-### Linux
+### WSL2 or Linux
 ```bash
 # Debug Build
 $ ./script/build_linux.sh
