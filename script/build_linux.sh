@@ -3,17 +3,17 @@
 # Usage
 #
 # Debug Build
-#     $ ./script/build_mingw64.sh
+#     $ ./script/build_linux.sh
 # Release Build
-#     $ ./script/build_mingw64.sh --release
+#     $ ./script/build_linux.sh --release
 #
 # Build and Run
-#     $ ./script/build_mingw64.sh && ./bin/debug/app.exe
+#     $ ./script/build_linux.sh && ./bin/debug/app
 
-EXE=app.exe
+EXE=app
 OUTDIR=bin
 
-CC=gcc.exe
+CC=gcc
 SRC="src/main.c"
 CFLAGS="${CFLAGS} -Wall"
 CFLAGS="${CFLAGS} -Wextra"
@@ -24,8 +24,8 @@ CFLAGS="${CFLAGS} -Wno-unused-parameter"
 CFLAGS="${CFLAGS} -Wno-unused-function"
 CFLAGS="${CFLAGS} -Wno-sign-conversion"
 INCLUDE="${INCLUDE} -Ivendor/raylib/include"
-LDFLAGS="${LDFLAGS} -Lvendor/raylib/bin/windows/mingw-w64"
-LIBS="-lraylib -lwinmm -lgdi32"
+LDFLAGS="${LDFLAGS} -Lvendor/raylib/bin/linux"
+LIBS="-lraylib"
 
 if [ "$1" = "--release" ]; then
     OUTDIR=$OUTDIR/release
