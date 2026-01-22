@@ -1,5 +1,5 @@
-bin/debug/
-bin/release/
+# bin/debug/
+# bin/release/
 *.obj
 *.pdb
 *.exe
