@@ -32,6 +32,3 @@ $ ./script/build_linux.sh --release
 # Build and Run
 $ ./script/build_linux.sh && ./bin/debug/app
 ```
-
-
-
