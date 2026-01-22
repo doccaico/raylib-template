@@ -25,12 +25,12 @@ CFLAGS="${CFLAGS} -Wno-unused-function"
 CFLAGS="${CFLAGS} -Wno-sign-conversion"
 INCLUDE="${INCLUDE} -Ivendor/raylib/include"
 LDFLAGS="${LDFLAGS} -Lvendor/raylib/bin/linux"
+LDFLAGS="${LDFLAGS} -Wl,-rpath=vendor/raylib/bin/linux"
 LIBS="-lraylib"
 
 if [ "$1" = "--release" ]; then
     OUTDIR=$OUTDIR/release
     CFLAGS="${CFLAGS} -O2 -DNDEBUG -D_NDEBUG"
-    LDFLAGS="${LDFLAGS} -Wl,--subsystem,windows"
 else
     OUTDIR=$OUTDIR/debug
     CFLAGS="${CFLAGS} -DDUBUG -D_DUBUG"
